@@ -82,11 +82,13 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3l2os"]
 radius = 43.0
-height = 206.0
+height = 195.546
 
 [node name="Princess" type="Node2D"]
+position = Vector2(118, -89)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-118, 101)
 scale = Vector2(0.978477, 0.930288)
 script = ExtResource("1_rcsom")
 
@@ -101,3 +103,11 @@ frame_progress = 0.159643
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
 position = Vector2(615, 358)
 shape = SubResource("CapsuleShape2D_3l2os")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D/CollisionShape2D"]
+position = Vector2(4.3298, -45.1937)
+scale = Vector2(1, 1)
+limit_left = -2000
+limit_top = -2000
+limit_right = 2000
+limit_bottom = 2000
