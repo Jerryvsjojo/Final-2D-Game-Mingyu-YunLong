@@ -8,10 +8,13 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.y -=1
+	#position.y -=1
+	pass
+	
 
 
 func _on_moving_lava_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.has_method("kill"):
 		body.kill()
 		get_tree().change_scene_to_file("res://texts/death scenes/burning to death.tscn") 
+

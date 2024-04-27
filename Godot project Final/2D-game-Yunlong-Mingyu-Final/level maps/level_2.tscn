@@ -45,6 +45,7 @@ theme_override_font_sizes/font_size = 91
 text = "Level 2 "
 
 [node name="Button" type="Button" parent="level 2 Label"]
+layout_mode = 0
 offset_left = -1.0
 offset_top = 21.0
 offset_right = 311.0

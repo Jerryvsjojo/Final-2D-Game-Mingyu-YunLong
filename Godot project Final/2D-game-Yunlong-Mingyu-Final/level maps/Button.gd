@@ -12,5 +12,5 @@ func _process(delta):
 
 
 func _on_pressed():
-	get_tree().change_scene_to_file("res://level_2.tscn")
+	get_tree().change_scene_to_file("res://level maps/realLevelTwo.tscn")
 	pass # Replace with function body.
