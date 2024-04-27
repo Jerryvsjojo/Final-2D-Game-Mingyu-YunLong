@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://cjkrs0cqni3f4"]
+[gd_scene load_steps=44 format=3 uid="uid://cjkrs0cqni3f4"]
 
 [ext_resource type="Texture2D" uid="uid://c8sktiyd0rwa0" path="res://ASSET/fireballs/fireball_high_speed_side_small/imgs/img_0.png" id="1_x2xxp"]
 [ext_resource type="Texture2D" uid="uid://c5hyjml1xwibf" path="res://ASSET/fireballs/fireball_high_speed_side_small/imgs/img_1.png" id="2_1vl3o"]
@@ -40,6 +40,7 @@
 [ext_resource type="Texture2D" uid="uid://bceeqjogtpee8" path="res://ASSET/fireballs/fireball_high_speed_side_small/imgs/img_37.png" id="38_aofdk"]
 [ext_resource type="Texture2D" uid="uid://ca3iejomtm7x6" path="res://ASSET/fireballs/fireball_high_speed_side_small/imgs/img_38.png" id="39_p5l18"]
 [ext_resource type="Texture2D" uid="uid://dhexynx02gjhw" path="res://ASSET/fireballs/fireball_high_speed_side_small/imgs/img_39.png" id="40_ahdo4"]
+[ext_resource type="Script" path="res://different traps/fireballs/fires.gd" id="41_ayffb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8nskl"]
 animations = [{
@@ -173,24 +174,26 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_no6y1"]
-radius = 39.9174
-height = 425.876
+radius = 31.6732
+height = 124.999
 
 [node name="Fireballs" type="Node2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(626, 86)
 rotation = 1.56857
 sprite_frames = SubResource("SpriteFrames_8nskl")
 autoplay = "default"
 frame_progress = 0.21505
+script = ExtResource("41_ayffb")
 
 [node name="fireballs" type="Area2D" parent="AnimatedSprite2D"]
-scale = Vector2(1, 1)
+position = Vector2(0.0400738, -18)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/fireballs"]
-position = Vector2(148.853, 66.3315)
+position = Vector2(256.821, 80.5719)
 rotation = 1.52906
-scale = Vector2(1, 1)
 shape = SubResource("CapsuleShape2D_no6y1")
 
+[connection signal="body_entered" from="AnimatedSprite2D/fireballs" to="AnimatedSprite2D" method="_on_fireballs_body_entered"]
 [connection signal="body_entered" from="AnimatedSprite2D/fireballs" to="AnimatedSprite2D/fireballs" method="_on_body_entered"]
