@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3x0f37ad41us"]
+
+[ext_resource type="Script" path="res://texts/death scenes/Button.gd" id="1_pajgm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x0bk6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6y7l1"]
+
+[node name="DeathOffCliff" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 197.0
+offset_top = 102.0
+offset_right = 934.0
+offset_bottom = 375.0
+theme_override_font_sizes/font_size = 200
+text = "You Die"
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 331.0
+offset_right = 567.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(0.85098, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "You are burned to death"
+
+[node name="Camera2D" type="Camera2D" parent="Label"]
+position = Vector2(377, 222)
+
+[node name="deathOffCliff" type="Button" parent="Label/Camera2D"]
+offset_left = -2461.0
+offset_top = -1260.0
+offset_right = 3465.0
+offset_bottom = 1872.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_x0bk6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6y7l1")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6y7l1")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_6y7l1")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6y7l1")
+text = "click to continue"
+script = ExtResource("1_pajgm")
+
+[connection signal="pressed" from="Label/Camera2D/deathOffCliff" to="Label/Camera2D/deathOffCliff" method="_on_pressed"]

@@ -106,7 +106,6 @@ shape = SubResource("CapsuleShape2D_3l2os")
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D/CollisionShape2D"]
 position = Vector2(4.3298, -45.1937)
-scale = Vector2(1, 1)
 limit_left = -2000
 limit_top = -2000
 limit_right = 2000
