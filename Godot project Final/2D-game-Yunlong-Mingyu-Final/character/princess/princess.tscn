@@ -87,6 +87,7 @@ height = 206.0
 [node name="Princess" type="Node2D"]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+scale = Vector2(0.978477, 0.930288)
 script = ExtResource("1_rcsom")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
