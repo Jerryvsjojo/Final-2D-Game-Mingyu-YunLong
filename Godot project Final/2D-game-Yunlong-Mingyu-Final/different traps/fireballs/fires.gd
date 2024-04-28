@@ -28,5 +28,5 @@ func _deferred_kill_and_scene_change(body):
 	call_deferred("_deferred_scene_change")
 
 func _deferred_scene_change():
-		get_tree().change_scene_to_file("res://texts/death scenes/burning to death.tscn")
+		get_tree().change_scene_to_file("res://texts/death scenes/general death.tscn")
 

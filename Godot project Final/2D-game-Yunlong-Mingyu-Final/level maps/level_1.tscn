@@ -236,7 +236,7 @@ position = Vector2(-247, 186)
 position = Vector2(4, -4)
 script = ExtResource("7_by7ye")
 
-[node name="moving saw" parent="." instance=ExtResource("5_vhh0y")]
+[node name="moving saw2" parent="." instance=ExtResource("5_vhh0y")]
 
 [node name="move to right" parent="." instance=ExtResource("7_hbdgh")]
 position = Vector2(-74, 618)

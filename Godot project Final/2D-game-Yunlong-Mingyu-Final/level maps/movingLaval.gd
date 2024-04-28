@@ -26,4 +26,4 @@ func _on_moving_lava_body_shape_entered(body_rid, body, body_shape_index, local_
 
 func _deferred_kill(body):
 	body.kill()
-	get_tree().change_scene_to_file("res://texts/death scenes/burning to death.tscn")
+	get_tree().change_scene_to_file("res://texts/death scenes/general death.tscn")

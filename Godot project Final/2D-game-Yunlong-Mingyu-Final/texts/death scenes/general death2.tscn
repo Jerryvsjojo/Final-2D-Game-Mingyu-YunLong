@@ -1,6 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://b3x0f37ad41us"]
+[gd_scene load_steps=4 format=3 uid="uid://dyd1b78m3ytld"]
 
-[ext_resource type="Script" path="res://texts/death scenes/Button.gd" id="1_pajgm"]
+[ext_resource type="Script" path="res://texts/death scenes/Button.gd" id="1_8no00"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x0bk6"]
 
@@ -30,6 +30,6 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_6y7l1")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_6y7l1")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6y7l1")
 text = "click to continue"
-script = ExtResource("1_pajgm")
+script = ExtResource("1_8no00")
 
 [connection signal="pressed" from="Label/Camera2D/deathOffCliff2" to="Label/Camera2D/deathOffCliff2" method="_on_pressed"]

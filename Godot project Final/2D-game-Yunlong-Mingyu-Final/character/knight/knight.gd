@@ -6,7 +6,7 @@ signal spawning
 @export var SPEED = 900.0 
 @export var JUMP_VELOCITY = -700.0
 @onready var animated_sprite_2d = $AnimatedSprite2D
-@onready var respawn_point = $respawn
+
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
