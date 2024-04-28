@@ -19,7 +19,6 @@ script = ExtResource("2_d72eq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Die000/StaticBody2D"]
 position = Vector2(-84.4688, -51.9329)
 rotation = -0.196595
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_unhnw")
 
 [connection signal="body_entered" from="Die000/StaticBody2D" to="Die000/StaticBody2D" method="_on_body_entered"]
