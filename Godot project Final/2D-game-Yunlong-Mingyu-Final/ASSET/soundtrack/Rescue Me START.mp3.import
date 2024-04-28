@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bf06w33f63qvh"
+path="res://.godot/imported/Rescue Me START.mp3-670293d6e06241c9add484754860f8ac.mp3str"
+
+[deps]
+
+source_file="res://ASSET/soundtrack/Rescue Me START.mp3"
+dest_files=["res://.godot/imported/Rescue Me START.mp3-670293d6e06241c9add484754860f8ac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
