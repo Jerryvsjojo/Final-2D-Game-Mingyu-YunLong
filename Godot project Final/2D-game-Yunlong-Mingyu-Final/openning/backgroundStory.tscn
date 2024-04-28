@@ -21,6 +21,7 @@ text = "\"A princess has been captured by a dragon
 and imprisoned in a small house. 
 As a knight, it's your task to save her.\" "
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Dragon/Label"]
 layout_mode = 0
@@ -30,6 +31,7 @@ offset_right = 1117.3
 offset_bottom = 1102.27
 theme_override_font_sizes/font_size = 30
 text = "AI generate"
+metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Dragon"]
 position = Vector2(8.32521, -1.20135)
@@ -43,3 +45,4 @@ offset_bottom = 589.65
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 50
 text = "Press SPACE to continue"
+metadata/_edit_use_anchors_ = true

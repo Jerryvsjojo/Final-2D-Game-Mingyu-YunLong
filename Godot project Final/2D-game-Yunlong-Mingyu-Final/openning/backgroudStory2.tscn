@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://nnf4dr2x4ms0"]
+
+[ext_resource type="Script" path="res://openning/backgroudStory2.gd" id="1_7kfv4"]
+
+[node name="BackgroudStory2" type="Node2D"]
+script = ExtResource("1_7kfv4")
+
+[node name="Dragon" type="Sprite2D" parent="."]
+position = Vector2(575, 402.25)
+scale = Vector2(1.08105, 1.04053)
+
+[node name="Label" type="Label" parent="Dragon"]
+offset_left = -569.816
+offset_top = -513.44
+offset_right = 576.184
+offset_bottom = -273.44
+theme_override_font_sizes/font_size = 50
+text = "After the knight saved you, the dragon
+ captured him and flew away. 
+Now it's your turn to rescue him, princess."
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Dragon/Label"]
+layout_mode = 0
+offset_left = 909.297
+offset_top = 980.272
+offset_right = 1117.3
+offset_bottom = 1102.27
+theme_override_font_sizes/font_size = 30
+text = "AI generate"
+metadata/_edit_use_anchors_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Dragon"]
+position = Vector2(8.32521, -1.20135)
+scale = Vector2(1.08105, 1.00293)
+
+[node name="Label2" type="Label" parent="Dragon"]
+offset_left = -289.532
+offset_top = 520.65
+offset_right = 296.468
+offset_bottom = 589.65
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Press SPACE to continue"
+metadata/_edit_use_anchors_ = true

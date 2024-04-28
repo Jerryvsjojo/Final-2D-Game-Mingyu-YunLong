@@ -3920,23 +3920,23 @@ offset_bottom = 647.0
 
 [node name="start button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 268.0
-offset_top = 436.0
-offset_right = 462.0
-offset_bottom = 543.0
+offset_left = 67.0
+offset_top = 439.0
+offset_right = 538.0
+offset_bottom = 546.0
 theme_override_font_sizes/font_size = 50
-text = "Start"
+text = "Tutorial (Bugged)"
 script = ExtResource("1_7r8be")
 
 [node name="END button" type="Button" parent="Control"]
 layout_mode = 0
-offset_left = 668.0
-offset_top = 439.0
-offset_right = 862.0
-offset_bottom = 546.0
+offset_left = 669.0
+offset_top = 436.0
+offset_right = 1124.0
+offset_bottom = 543.0
 theme_override_font_sizes/font_size = 50
 toggle_mode = true
-text = "End
+text = "Start Your Journey 
 "
 script = ExtResource("2_3ol0f")
 
@@ -3953,7 +3953,7 @@ text = "2D GAME"
 [node name="Background" type="Sprite2D" parent="."]
 show_behind_parent = true
 light_mask = 0
-position = Vector2(574, 325)
+position = Vector2(578, 323)
 scale = Vector2(1.48728, 1.34986)
 texture = ExtResource("3_2bhu6")
 

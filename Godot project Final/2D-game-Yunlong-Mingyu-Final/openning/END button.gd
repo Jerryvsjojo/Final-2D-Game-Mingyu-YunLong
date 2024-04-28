@@ -11,7 +11,5 @@ func _process(delta):
 	pass
 
 func _on_pressed():
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://openning/backgroundStory.tscn") 
 	print("yes")
-	pass
-
