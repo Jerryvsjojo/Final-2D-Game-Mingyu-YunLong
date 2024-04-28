@@ -8,7 +8,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	progress_ratio += .01
+	progress_ratio += 0.001
 	pass
 
 
