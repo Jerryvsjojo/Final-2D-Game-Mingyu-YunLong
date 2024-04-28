@@ -6,7 +6,7 @@ signal spawning
 @export var SPEED = 500.0
 @export var JUMP_VELOCITY = -900.0
 @onready var animated_sprite_2d = $AnimatedSprite2D
-@onready var respawn_point = $respawn
+
 
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -54,13 +54,14 @@ func respawn():
 	print("respawning")
 	emit_signal("spawning")
 	alive = true
-	move_and_slide()
+
 
 
 func kill():
 	alive = false
 	velocity.y = 0
+	
 	respawn()
-
+	
 
 	

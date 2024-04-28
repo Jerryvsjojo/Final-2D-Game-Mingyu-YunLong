@@ -13,8 +13,17 @@ func _process(delta):
 	
 
 
+#func _on_moving_lava_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
+	#if body.has_method("kill"):
+	#	body.kill()
+		#get_tree().change_scene_to_file("res://texts/death scenes/burning to death.tscn") 
+
+#function below was modified by chatgpt, above was the original one.
 func _on_moving_lava_body_shape_entered(body_rid, body, body_shape_index, local_shape_index):
 	if body.has_method("kill"):
-		body.kill()
-		get_tree().change_scene_to_file("res://texts/death scenes/burning to death.tscn") 
+		# Defer the killing of the body to the next frame
+		call_deferred("_deferred_kill", body)
 
+func _deferred_kill(body):
+	body.kill()
+	get_tree().change_scene_to_file("res://texts/death scenes/burning to death.tscn")
