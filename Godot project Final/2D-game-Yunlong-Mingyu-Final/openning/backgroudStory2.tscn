@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://nnf4dr2x4ms0"]
+[gd_scene load_steps=3 format=3 uid="uid://nnf4dr2x4ms0"]
 
 [ext_resource type="Script" path="res://openning/backgroudStory2.gd" id="1_7kfv4"]
+[ext_resource type="Texture2D" uid="uid://bpuuls8pk0wqr" path="res://ASSET/609267_After the knight saved you, the dragon_ captured h_xl-1024-v1-0.png" id="2_cemc8"]
 
 [node name="BackgroudStory2" type="Node2D"]
 script = ExtResource("1_7kfv4")
@@ -8,27 +9,27 @@ script = ExtResource("1_7kfv4")
 [node name="Dragon" type="Sprite2D" parent="."]
 position = Vector2(575, 402.25)
 scale = Vector2(1.08105, 1.04053)
+texture = ExtResource("2_cemc8")
+
+[node name="Label3" type="Label" parent="Dragon"]
+offset_left = 342.256
+offset_top = 466.832
+offset_right = 550.259
+offset_bottom = 588.83
+theme_override_font_sizes/font_size = 30
+text = "AI generate"
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Dragon"]
-offset_left = -569.816
-offset_top = -513.44
-offset_right = 576.184
-offset_bottom = -273.44
+offset_left = -577.217
+offset_top = -139.592
+offset_right = 568.783
+offset_bottom = 100.408
 theme_override_font_sizes/font_size = 50
 text = "After the knight saved you, the dragon
  captured him and flew away. 
 Now it's your turn to rescue him, princess."
 horizontal_alignment = 1
-metadata/_edit_use_anchors_ = true
-
-[node name="Label" type="Label" parent="Dragon/Label"]
-layout_mode = 0
-offset_left = 909.297
-offset_top = 980.272
-offset_right = 1117.3
-offset_bottom = 1102.27
-theme_override_font_sizes/font_size = 30
-text = "AI generate"
 metadata/_edit_use_anchors_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Dragon"]
