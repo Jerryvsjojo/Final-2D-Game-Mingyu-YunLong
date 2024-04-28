@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dyd1b78m3ytld"]
+[gd_scene load_steps=5 format=3 uid="uid://dyd1b78m3ytld"]
 
 [ext_resource type="Script" path="res://texts/death scenes/Button.gd" id="1_8no00"]
+[ext_resource type="Script" path="res://texts/death scenes/hint.gd" id="2_qophd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x0bk6"]
 
@@ -32,13 +33,14 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_6y7l1")
 text = "click to continue"
 script = ExtResource("1_8no00")
 
-[node name="Label2" type="Label" parent="."]
-offset_left = 394.0
-offset_top = 409.0
-offset_right = 748.0
-offset_bottom = 451.0
+[node name="hint" type="Label" parent="."]
+offset_left = 96.0
+offset_top = 408.0
+offset_right = 1035.0
+offset_bottom = 578.0
 theme_override_colors/font_color = Color(0.85098, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "You are burned to death"
+horizontal_alignment = 1
+script = ExtResource("2_qophd")
 
 [connection signal="pressed" from="Label/Camera2D/deathOffCliff2" to="Label/Camera2D/deathOffCliff2" method="_on_pressed"]

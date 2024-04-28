@@ -3847,6 +3847,11 @@ cache/0/94/0/descent = 0.0
 cache/0/94/0/underline_position = 0.0
 cache/0/94/0/underline_thickness = 0.0
 cache/0/94/0/scale = 1.0
+cache/0/94/0/glyphs/0/advance = Vector2(0, 0)
+cache/0/94/0/glyphs/0/offset = Vector2(0, 0)
+cache/0/94/0/glyphs/0/size = Vector2(0, 0)
+cache/0/94/0/glyphs/0/uv_rect = Rect2(0, 0, 0, 0)
+cache/0/94/0/glyphs/0/texture_idx = -1
 cache/0/94/0/kerning_overrides/16/0 = Vector2(0, 0)
 cache/0/94/0/kerning_overrides/50/0 = Vector2(0, 0)
 cache/0/94/0/kerning_overrides/500/0 = Vector2(0, 0)
@@ -3941,14 +3946,21 @@ text = "Start Your Journey
 script = ExtResource("2_3ol0f")
 
 [node name="TextEdit" type="TextEdit" parent="."]
-offset_left = 355.0
-offset_top = 129.0
-offset_right = 828.0
-offset_bottom = 273.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 417.0
+offset_top = 249.0
+offset_right = 763.0
+offset_bottom = 394.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = SubResource("Theme_yj8ow")
 theme_override_fonts/font = SubResource("FontFile_u2k0y")
 theme_override_font_sizes/font_size = 94
-text = "2D GAME"
+text = "Pompeii"
 
 [node name="Background" type="Sprite2D" parent="."]
 show_behind_parent = true

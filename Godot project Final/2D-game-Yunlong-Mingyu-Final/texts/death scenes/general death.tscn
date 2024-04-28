@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3x0f37ad41us"]
+[gd_scene load_steps=6 format=3 uid="uid://b3x0f37ad41us"]
 
 [ext_resource type="Script" path="res://texts/death scenes/Button.gd" id="1_pajgm"]
 [ext_resource type="AudioStream" uid="uid://cpyd2lvwfsfws" path="res://ASSET/soundtrack/error_CDOxCYm.mp3" id="2_mlay1"]
+[ext_resource type="Script" path="res://texts/death scenes/hint 2.gd" id="3_82a8v"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x0bk6"]
 
@@ -38,12 +39,14 @@ stream = ExtResource("2_mlay1")
 autoplay = true
 
 [node name="Label2" type="Label" parent="."]
-offset_left = 383.0
-offset_top = 403.0
-offset_right = 737.0
-offset_bottom = 445.0
+offset_left = 74.0
+offset_top = 369.0
+offset_right = 1063.0
+offset_bottom = 570.0
 theme_override_colors/font_color = Color(0.85098, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
-text = "You are burned to death"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_82a8v")
 
 [connection signal="pressed" from="Label/Camera2D/deathOffCliff2" to="Label/Camera2D/deathOffCliff2" method="_on_pressed"]
