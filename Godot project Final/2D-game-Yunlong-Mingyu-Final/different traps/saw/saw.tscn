@@ -1,0 +1,91 @@
+[gd_scene load_steps=13 format=3 uid="uid://b5w5ehif0nk0l"]
+
+[ext_resource type="Texture2D" uid="uid://bblkxtaw7647n" path="res://ASSET/traps/Suriken.png" id="1_7qbkr"]
+[ext_resource type="Script" path="res://different traps/saw/saw.gd" id="2_finpm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_askm1"]
+atlas = ExtResource("1_7qbkr")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tubul"]
+atlas = ExtResource("1_7qbkr")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fe48"]
+atlas = ExtResource("1_7qbkr")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dt8jf"]
+atlas = ExtResource("1_7qbkr")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x65eg"]
+atlas = ExtResource("1_7qbkr")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5qejv"]
+atlas = ExtResource("1_7qbkr")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i47a2"]
+atlas = ExtResource("1_7qbkr")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uenhv"]
+atlas = ExtResource("1_7qbkr")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u60ia"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_askm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tubul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fe48")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dt8jf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x65eg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5qejv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i47a2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uenhv")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_10ntr"]
+
+[node name="saw" type="Node2D"]
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+position = Vector2(-1.99403, -1.01186)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="StaticBody2D"]
+position = Vector2(2.99995, 0.0178215)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_u60ia")
+animation = &"moving"
+autoplay = "moving"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2(8, 8)
+shape = SubResource("CircleShape2D_10ntr")
+script = ExtResource("2_finpm")
+
+[connection signal="area_entered" from="StaticBody2D" to="StaticBody2D/CollisionShape2D" method="_on_static_body_2d_area_entered"]
+[connection signal="body_entered" from="StaticBody2D" to="StaticBody2D/CollisionShape2D" method="_on_static_body_2d_body_entered"]
+[connection signal="child_entered_tree" from="StaticBody2D/CollisionShape2D" to="StaticBody2D/CollisionShape2D" method="_on_child_entered_tree"]

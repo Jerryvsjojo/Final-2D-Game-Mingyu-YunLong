@@ -1,8 +1,9 @@
 extends CollisionShape2D
 
 
-# Called when the node enters the scene tree for the first time.
-#func _ready():
+#Called when the node enters the scene tree for the first time.
+func _ready():
+	pass
 	#pass # Replace with function body.
 
 
@@ -12,13 +13,16 @@ extends CollisionShape2D
 
 
 
-#func _on_area_2d_body_entered(body):
-	#if body.has_method("kill"):
-		#body.kill() 
-	#pass # Replace with function body.
 
 
 
 	#pass # Replace with function body.
 
+
+
+
+
+func _on_static_body_2d_body_entered(body):
+	if body.has_method("kill"):
+		body.kill() 
 
