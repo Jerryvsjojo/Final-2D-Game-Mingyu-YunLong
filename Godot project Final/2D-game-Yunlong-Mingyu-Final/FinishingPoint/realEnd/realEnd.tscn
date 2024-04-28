@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://0q77cynub66q"]
+
+[ext_resource type="Texture2D" uid="uid://dbiagh4rfd3te" path="res://ASSET/Free-2D-Knight-Sprite-Sheets/_PNG/1_KNIGHT/_DIE/_DIE_000.png" id="1_mwgul"]
+[ext_resource type="Script" path="res://FinishingPoint/realEnd/realEnd.gd" id="2_d72eq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unhnw"]
+size = Vector2(424.745, 744.568)
+
+[node name="RealEnd" type="Node2D"]
+
+[node name="Die000" type="Sprite2D" parent="."]
+position = Vector2(761, 439)
+rotation = -1.39372
+texture = ExtResource("1_mwgul")
+
+[node name="StaticBody2D" type="Area2D" parent="Die000"]
+script = ExtResource("2_d72eq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Die000/StaticBody2D"]
+position = Vector2(-84.4688, -51.9329)
+rotation = -0.196595
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_unhnw")
+
+[connection signal="body_entered" from="Die000/StaticBody2D" to="Die000/StaticBody2D" method="_on_body_entered"]

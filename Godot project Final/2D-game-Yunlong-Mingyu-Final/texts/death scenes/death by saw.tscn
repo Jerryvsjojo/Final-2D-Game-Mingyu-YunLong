@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cp1cw60qus8u5"]
+[gd_scene load_steps=4 format=3 uid="uid://cp1cw60qus8u5"]
 
 [ext_resource type="Script" path="res://texts/death scenes/Button.gd" id="1_hrcjs"]
+[ext_resource type="AudioStream" uid="uid://cpyd2lvwfsfws" path="res://ASSET/soundtrack/error_CDOxCYm.mp3" id="2_2penl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjs0b"]
 
@@ -35,5 +36,9 @@ offset_bottom = 1872.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_xjs0b")
 text = "click to continue"
 script = ExtResource("1_hrcjs")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_2penl")
+autoplay = true
 
 [connection signal="pressed" from="Label/Camera2D/deathBySaw" to="Label/Camera2D/deathBySaw" method="_on_pressed"]

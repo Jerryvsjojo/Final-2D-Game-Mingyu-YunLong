@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://bs7msib41l2hw"]
+
+[ext_resource type="Script" path="res://texts/death scenes/Button.gd" id="1_we8lp"]
+[ext_resource type="AudioStream" uid="uid://cr420k5gac60e" path="res://ASSET/soundtrack/dragon-roar-high-intensity-36564.mp3" id="2_46701"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_02xs3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ap6t7"]
+
+[node name="FinalDeath" type="Node2D"]
+
+[node name="deathOffCliff2" type="Button" parent="."]
+offset_left = -1887.0
+offset_top = -936.0
+offset_right = 4039.0
+offset_bottom = 2196.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_02xs3")
+text = "click to continue"
+script = ExtResource("1_we8lp")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 197.0
+offset_top = 102.0
+offset_right = 934.0
+offset_bottom = 375.0
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ap6t7")
+text = "You Die"
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -164.0
+offset_top = 344.0
+offset_right = 920.0
+offset_bottom = 399.0
+theme_override_colors/font_color = Color(0.988235, 0.0431373, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "You entered the dragon's house, it kills you immediately."
+horizontal_alignment = 1
+
+[node name="Camera2D" type="Camera2D" parent="Label"]
+position = Vector2(377, 222)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_46701")
+autoplay = true
+
+[connection signal="pressed" from="deathOffCliff2" to="deathOffCliff2" method="_on_pressed"]

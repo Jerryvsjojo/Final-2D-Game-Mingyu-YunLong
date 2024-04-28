@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://1ocy6rsck505"]
+[gd_scene load_steps=5 format=3 uid="uid://1ocy6rsck505"]
 
 [ext_resource type="Script" path="res://texts/death scenes/Button.gd" id="1_bp2si"]
+[ext_resource type="AudioStream" uid="uid://cpyd2lvwfsfws" path="res://ASSET/soundtrack/error_CDOxCYm.mp3" id="2_lnose"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_26hyn"]
 
@@ -39,5 +40,9 @@ offset_bottom = 1872.0
 theme_override_styles/normal = SubResource("StyleBoxEmpty_6eidk")
 text = "click to continue"
 script = ExtResource("1_bp2si")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_lnose")
+autoplay = true
 
 [connection signal="pressed" from="Label/Camera2D/deathOffCliff2" to="Label/Camera2D/deathOffCliff2" method="_on_pressed"]

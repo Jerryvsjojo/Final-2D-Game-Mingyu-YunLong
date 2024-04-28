@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bq53rvphi3785"
+path="res://.godot/imported/Fading Embers.mp3-171e632fc2976d4d36a91adf31ca820d.mp3str"
+
+[deps]
+
+source_file="res://ASSET/soundtrack/Fading Embers.mp3"
+dest_files=["res://.godot/imported/Fading Embers.mp3-171e632fc2976d4d36a91adf31ca820d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

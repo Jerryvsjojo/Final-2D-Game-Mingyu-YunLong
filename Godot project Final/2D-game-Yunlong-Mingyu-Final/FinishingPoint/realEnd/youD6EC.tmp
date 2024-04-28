@@ -1,0 +1,39 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg1cp3ji8c3h2"]
+
+[ext_resource type="Script" path="res://FinishingPoint/realEnd/final button.gd" id="1_x571e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jud6j"]
+
+[node name="YouWin" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 197.0
+offset_top = 102.0
+offset_right = 934.0
+offset_bottom = 375.0
+theme_override_font_sizes/font_size = 200
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jud6j")
+text = "You Win"
+
+[node name="Label" type="Label" parent="Label"]
+layout_mode = 0
+offset_left = -161.0
+offset_top = 333.0
+offset_right = 923.0
+offset_bottom = 446.0
+theme_override_colors/font_color = Color(0.988235, 0.0431373, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Congradulation you finished our game!
+Click to see the ending."
+horizontal_alignment = 1
+
+[node name="finalbutton" type="Button" parent="Label/Label"]
+layout_mode = 0
+offset_left = 302.0
+offset_top = 51.0
+offset_right = 782.0
+offset_bottom = 129.0
+script = ExtResource("1_x571e")
+
+[node name="Camera2D" type="Camera2D" parent="Label"]
+position = Vector2(377, 222)

@@ -32,4 +32,13 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_6y7l1")
 text = "click to continue"
 script = ExtResource("1_8no00")
 
+[node name="Label2" type="Label" parent="."]
+offset_left = 394.0
+offset_top = 409.0
+offset_right = 748.0
+offset_bottom = 451.0
+theme_override_colors/font_color = Color(0.85098, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "You are burned to death"
+
 [connection signal="pressed" from="Label/Camera2D/deathOffCliff2" to="Label/Camera2D/deathOffCliff2" method="_on_pressed"]
