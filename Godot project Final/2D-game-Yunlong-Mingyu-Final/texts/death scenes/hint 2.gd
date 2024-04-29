@@ -7,7 +7,9 @@ var sentences = [
 	"My game would crash if you die too many times.",
 	"The dragon seems don't like the taste of men.",
 	"Practice some Dark Soul Games before you try ours.",
-	"Timing is important, don't just press keys."
+	"Timing is important, don't just press keys.",
+	"That's all you can do?",
+	"That's it?"
 ]
 
 func _ready():
