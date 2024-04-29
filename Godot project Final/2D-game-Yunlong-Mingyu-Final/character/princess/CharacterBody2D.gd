@@ -49,8 +49,9 @@ var alive = true
 
 
 func respawn():
-	position.x = 0
-	position.y = 0
+	#position.x = 0
+	#position.y = 0
+	position = Checkpoint.yourPosition 
 	print("respawning")
 	emit_signal("spawning")
 	alive = true

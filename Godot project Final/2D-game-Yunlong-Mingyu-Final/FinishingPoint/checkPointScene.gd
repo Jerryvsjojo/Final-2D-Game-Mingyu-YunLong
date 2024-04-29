@@ -7,6 +7,6 @@ func _ready():
 
 
 
-#func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(body):
 	#$music2.play()
-	#Checkpoint.yourPosition = global_position
+	Checkpoint.yourPosition = global_position
